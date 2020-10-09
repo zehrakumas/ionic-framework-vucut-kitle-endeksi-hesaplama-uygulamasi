@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!--
+<ion-title>
+      Tab 3
+    </ion-title>
+    -->
+    <!--
+      
+    -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--
+<ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>Tab 3</ion-title> 
+    </ion-toolbar>
+  </ion-header>
+  -->
+  
+  <p class="baslik">Vücut Kitle Endeksi Hesaplama</p>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="duzen">Boyunuz</ion-label>
+      <ion-input placeholder="Örn; 1.60" [(ngModel)]="boy"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label class="duzen">Kilonuz</ion-label>
+      <ion-input  placeholder="Örn; 60" [(ngModel)]="kilo"></ion-input>
+    </ion-item>
+    </ion-list>
+    <ion-button class="hesapla" color="danger" (click)="hesapla()">Hesapla</ion-button>
+
+    <p></p>
+
+    <div class="yazi">
+    
+    <p *ngIf="sonuc==1"> <b>0 ila 18,4 BMI:</b> 0 ila 18,4 BMI: Zayıf. Kişinin boyuna oranla ağırlığının yetersiz olduğunu ifade eden bu değer ile karşılaşılması durumunda kişinin diyetisyen eşliğinde sağlıklı bir şekilde kilo alması önerilir.</p>
+    <p *ngIf="sonuc==2"> <b>18.5 ila 24.9 BMI:</b> Normal. Bu değer aralığı kişinin ideal kiloda olduğunu gösterir. Bu değere sahip olan kişilerin düzenli, dengeli ve sağlıklı beslenmeye devam etmeleri önerilir.</p>
+    <p *ngIf="sonuc==3"><b>25 ila 29.9 BMI:</b> Fazla Kilolu. Kişinin boyuna oranla kilosunun fazla olduğunu gösteren bu değer aralığında kişinin uygun diyet ile fazla kilolarından kurtulması önerilir.</p>
+    <p *ngIf="sonuc==4"><b>30 ila 34.9 BMI:</b> Şişman. Birinci derece obez kategorisinde değerlendiren değer aralığında, kişinin kilosunun sağlık açısından risk oluşturabilecek düzeyde olduğu anlaşılır. Bu kişilerin diyetisyen yardımıyla kilo vermesi önerilir.</p>
+    <p *ngIf="sonuc==5"><b>35 ila 44.9 BMI:</b> Şişman. İkinci derece obez olarak tanımlanan bu değerlere sahip olan kişilerde kalp ve damar hastalıkları bakımından risk artar. Kişinin kilo vermek için diyetisyene başvurması önerilir.</p>
+    <p *ngIf="sonuc==6"><b>45+ BMI:</b> Aşırı Şişman. Üçüncü derece obez kategorisinde olan bu kişilerde hastalık gelişme riski çok yüksektir. Hekim ve diyetisyen eşliğinde kilo verilmesi önerilir.</p>
+    <p *ngIf="sonuc==7">Lütfen geçerli ifadeler giriniz.</p>
+      
+  </div>
+</ion-content>
